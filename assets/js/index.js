@@ -1,11 +1,27 @@
 
-let num = 0;
-num += 10;
+console.log('global');
 
-num *= 3;
+let glob = 'glob'
 
-const userInput = prompt('Insert number');
+function sayYourAge() {
+  // definition
+  const num = prompt("Введите ваш возраст");
 
-const userNumber = Number(userInput);
+  console.log('outer func');
 
-console.log(asd === 'undefined');
+  function func () {
+    let innerNum = 0;
+
+    console.log('inner func')
+    console.log(glob);
+    console.log(num);
+    console.log(innerNum);
+  }
+  func()
+
+  return num;
+}
+
+const result = sayYourAge();
+
+console.log(result);
