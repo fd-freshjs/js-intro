@@ -26,29 +26,12 @@ const ha = prompt("Введите высоту трегольника");
 
 
 function trapecArea(numa, numb, numh) {
-  let prepA = numa;
-  let prepB = numb;
-  let prepH = numh;
-
-  if (typeof numa !== 'number') {
-    prepA = Number(numa);
+  if (isNaN(numa) || isNaN(numb) || isNaN(numh)) {
+    return null;
   }
 
-  if (typeof numb !== 'number') {
-    prepB = Number(numb);
-  }
+  const result = ((numa + numb) / 2) * numh;
 
-  if (typeof numh !== 'number') {
-    prepH = Number(numh);
-  }
-
-  const result = ((prepA + prepB) / 2) * prepH;
-
-  console.log(isNaN(result));
-  if (isNaN(result)) {
-    return null; //error
-  }
-  
   return result;
 }
 
