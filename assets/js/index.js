@@ -1,51 +1,29 @@
-console.log("global");
+const num1 = prompt()
+const operator = prompt()
+const num2 = prompt()
 
-let glob = "glob";
-
-function sayYourAge() {
-  // definition
-  const num = prompt("Введите ваш возраст");
-
-  console.log("outer func");
-
-  return num;
-}
-
-// const result = sayYourAge();
-
-// console.log(result);
-
-/////////////////////////////
-
-const a = prompt("Введите сторону a трапеции");
-const b = prompt("Введите сторону b трапеции");
-const ha = prompt("Введите высоту трегольника");
-
-
-
-// typeof variable === 'number'
-// isNaN(variable) -> isNaN(Number(variable))
-// <, >, <=, >=
-
-function trapecArea(numa, numb, numh) {
-  if (isNaN(numa) || isNaN(numb) || isNaN(numh)) {
+function calculator(a, op, b) {
+  if(isNaN(a) || isNaN(b)) {
     return null;
   }
 
-  const result = ((numa + numb) / 2) * numh;
+  if (op !== '+' || op !== '-') {
+    return null;
+  }
 
-  return result;
+  if (op === '+') {
+    return a + b;
+  }
+
+  if (op === '-') {
+    return a - b;
+  }
+  
+  return null;
 }
 
+calculator(num1, operator, num2);
 
-
-
-
-
-
-const result = trapecArea(a, b, ha);
-
-console.log(result);
-
-// создать функцию для расчета площади трапеции,
-// принимать числа как параметры
+function sayHello(name) {
+  return 'Hello, ' + name;
+}
