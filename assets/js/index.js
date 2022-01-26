@@ -42,7 +42,14 @@ function trapecArea(numa, numb, numh) {
     prepH = Number(numh);
   }
 
-  return ((prepA + prepB) / 2) * prepH;
+  const result = ((prepA + prepB) / 2) * prepH;
+
+  console.log(isNaN(result));
+  if (isNaN(result)) {
+    return null; //error
+  }
+  
+  return result;
 }
 
 
