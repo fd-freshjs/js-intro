@@ -23,7 +23,9 @@ const ha = prompt("Введите высоту трегольника");
 
 
 
-
+// typeof variable === 'number'
+// isNaN(variable) -> isNaN(Number(variable))
+// <, >, <=, >=
 
 function trapecArea(numa, numb, numh) {
   if (isNaN(numa) || isNaN(numb) || isNaN(numh)) {
