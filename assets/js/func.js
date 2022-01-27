@@ -1,14 +1,33 @@
-// напишите функцию которая вернет всегда положительную версию числа
-// (модуль числа)
-
-function modul(num) {
-  if (num < 0) {
-    return num * -1;
+// фраза на одном из языков в зависимости от запроса
+function helloPhrase(lang) {
+  if (lang === "ua") {
+    return "Добридень";
+  } else if (lang === "jp") {
+    return "Ohayo";
+  } else if (lang === "is") {
+    return "Hola";
   }
 
-  return num;
+  return "Hello";
 }
 
-const moduleChisla = modul(20);
+const res = helloPhrase("is");
 
-console.log(moduleChisla);
+console.log(res);
+
+function helloPhraseV2(lang) {
+  switch (lang) {
+    case "ua":
+      console.log("ua case");
+      return "Добридень";
+    case "is":
+      console.log("is case");
+      return "Hola";
+  }
+
+  return "Hello";
+}
+
+const res1 = helloPhraseV2("");
+
+console.log(res1);
