@@ -42,11 +42,11 @@ function calculator(a, op, b) {
 
 calculator(num1, operator, num2);
 
-function sayHello(name) {
+const sayHello = (name) => {
   return "Hello, " + name;
 }
 
-function max(a, b) {
+const max = (a, b) => {
   if (a >= b) {
     return a;
   }
