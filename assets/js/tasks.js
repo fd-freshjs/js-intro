@@ -1,3 +1,25 @@
+
+/* 
+  Создать функцию checkMultiplicity, которая принимает два числа 
+  и проверяет кратность нацело первого вторым:
+checkMultiplicity(25, 5) // true
+checkMultiplicity(15, 3) // true
+checkMultiplicity(15, 5) // true
+checkMultiplicity(15, 4) // false
+*/
+
+function checkMultiplicity (num, divider) {
+
+  // return ( num % divider === 0 ? true : false );
+
+  if(num % divider === 0) {
+    return true;
+  }
+  
+  return false;
+}
+
+
 // 1. функция которая приветствует пользователя в зависимости от полученного имени
 // sayHello('Viktor') // Привет Viktor
 
