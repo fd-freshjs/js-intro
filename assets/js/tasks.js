@@ -1,4 +1,3 @@
-
 /* 
   Создать функцию checkMultiplicity, которая принимает два числа 
   и проверяет кратность нацело первого вторым:
@@ -8,17 +7,35 @@ checkMultiplicity(15, 5) // true
 checkMultiplicity(15, 4) // false
 */
 
-function checkMultiplicity (num, divider) {
-
+const checkMultiplicity = (num, divider) => {
   // return ( num % divider === 0 ? true : false );
 
-  if(num % divider === 0) {
+  if (num % divider === 0) {
     return true;
   }
-  
+
+  return false;
+};
+
+checkMultiplicity(25, 5); // true
+
+/* 
+
+  Проверка возможности треугольника. Создать функцию которая принимает 
+  длины треугольника; 
+  функция возвращает true если треугольник возможен и false если нет
+*/
+
+function isTriangle(a, b, c) {
+  if (typeof a !== "number" || typeof b !== "number" || typeof c !== "number") {
+    return false;
+  }
+
+  if (a + b >= c) {
+    return true;
+  }
   return false;
 }
-
 
 // 1. функция которая приветствует пользователя в зависимости от полученного имени
 // sayHello('Viktor') // Привет Viktor
@@ -37,7 +54,6 @@ function checkMultiplicity (num, divider) {
 
 // 5. функция которая принимает параметр кол-во этажей подьезда (с 4мя квартирами на этаже) и вернет посчитаное общее колво квартир в подьезде
 
-
 // 6.* функция которая проверит что полученное как параметр число находится между 0 и 10, вернет ложь если снаружи диапазона
 
 // * функция которая вернет модуль (abs) числа (если пришло отрицательное то вернет положительное, если положительное то вернет положительное)
@@ -45,6 +61,5 @@ function checkMultiplicity (num, divider) {
 // * функция которая вернет квадратный корень числа (sqrt)
 // num ** (1/2)
 // * функция которая посчитает корни квадратного уравнения (формула есть в интернете)
-// sqrt 
-// if 
-
+// sqrt
+// if
