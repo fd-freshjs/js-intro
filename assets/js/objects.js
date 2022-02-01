@@ -9,19 +9,39 @@ const userPhone = '380984637465';
 
 const userEmail = 'mail@gmail.com';
 
-Number('123')
-
 const obj = {
-  key: 234,
-  key2: 'string',
-}
+  key: 1
+};
 
+let str = '1'
+
+// обьект всегда true
+/* if (obj) {
+  console.log('true');
+}
+else {
+  console.log('false');
+} */
+
+
+//////////////////
+
+console.log(str);
 console.log(obj);
 
-if (obj.key3) {
-  console.log(obj.key3);
+function func (param) {
+  // primitive - param имеет копию значения
+  param += 5;
 }
-//null, NaN, undefined, 0
-else {
-  console.log('key3 = undefined');
+func(str) // primitive types
+
+// тип данных обьект это ссылка на облась памяти
+function func2 (param) {
+  // object - непосредственно та же ссылка на память
+  param.key += 5;
 }
+func2(obj)
+
+
+console.log(str);
+console.log(obj);
