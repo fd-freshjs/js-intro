@@ -2,46 +2,34 @@
 // пользователь
 // имя, фамилии, телефон, дата рождения, адрес, ел почта
 
-const userFirstname = 'Василий';
-const userLastname = 'Егоров';
 
-const userPhone = '380984637465';
+const user1 = {
+  firstname: 'Василий',
+  lastname: 'Егоров',
+  phones: {
+    home: '75123123',
+    work: '3802923912'
+  },
+  age: 47,
+  isMale: true,
 
-const userEmail = 'mail@gmail.com';
-
-const obj = {
-  key: 1
+  sayHello: function () {
+    return 'helo'
+  }
 };
 
-let str = '1'
+const user2 = {
+  firstname: 'Виктор',
+  lastname: 'Егоров',
+  phone: '380984637465',
+  age: 45,
+  isMale: true,
+};
 
-// обьект всегда true
-/* if (obj) {
-  console.log('true');
-}
-else {
-  console.log('false');
-} */
+console.log(user1.firstname);
+console.log(user1.lastname);
+console.log(user1.phones);
+console.log(user1.phones.work);
 
-
-//////////////////
-
-console.log(str);
-console.log(obj);
-
-function func (param) {
-  // primitive - param имеет копию значения
-  param += 5;
-}
-func(str) // primitive types
-
-// тип данных обьект это ссылка на облась памяти
-function func2 (param) {
-  // object - непосредственно та же ссылка на память
-  param.key += 5;
-}
-func2(obj)
-
-
-console.log(str);
-console.log(obj);
+let res = user1.sayHello()
+console.log(res)
